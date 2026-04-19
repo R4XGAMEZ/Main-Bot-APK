@@ -1,41 +1,32 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.application' version '8.2.2'
 }
 
 android {
-    namespace 'com.r4x.capcut_helper'
+    namespace 'com.r4x.mainbot'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.r4x.capcut_helper"
+        applicationId "com.r4x.mainbot"
         minSdk 24
         targetSdk 34
-        versionCode 4
-        versionName "4.0.0"
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            shrinkResources false
-        }
         debug {
             debuggable true
         }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    sourceSets {
-        main {
-            java.srcDirs = ['src/main/java']
-            res.srcDirs = ['src/main/res']
-            manifest.srcFile 'src/main/AndroidManifest.xml'
+        release {
+            minifyEnabled false
         }
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
 }
 
 dependencies {
